@@ -27,7 +27,23 @@ To run this project, follow these steps:
 
    This command will install all the required packages listed in the `package.json` file.
 
-4. **Start the Server**:  
+4. **Configure the PostgreSQL Database**
+
+Ensure you incorporate the following variables into your `.env` file. You can find an example `.env` file attached below:
+
+```env
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+```
+
+These variables are crucial for establishing a connection to the database. Make sure they are accurately configured within your environment file.
+
+A sample json file is provided at `./rooms.json`, this can help you in setting up some data in the rooms table
+
+5. **Start the Server**:  
 
    Note: The enviroment variables file has been left in the repo to ease set up
   
@@ -45,7 +61,7 @@ To run this project, follow these steps:
 
    Choose the appropriate command based on your needs.
 
-5. **Access the API**:  
+6. **Access the API**:  
    Once the server is running, you can access the API through your web browser or a tool like Postman by visiting the following URL:
 
    ```

@@ -22,7 +22,7 @@ import { QueryHelperModule } from './query-helper/query-helper.module';
         password: configService.get<string>('POSTGRES_PASSWORD'),
         database: configService.get<string>('POSTGRES_DB'),
         entities: [Room],
-        synchronize: false,
+        synchronize: true,
         logging: true,
       }),
       inject: [ConfigService],
