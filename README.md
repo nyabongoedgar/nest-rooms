@@ -28,6 +28,9 @@ To run this project, follow these steps:
    This command will install all the required packages listed in the `package.json` file.
 
 4. **Start the Server**:  
+
+   Note: The enviroment variables file has been left in the repo to ease set up
+  
    Start the server by executing one of the following commands:
 
    - For production mode:
