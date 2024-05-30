@@ -1,6 +1,7 @@
 import { Type } from 'class-transformer';
 import { IsNumber, IsString, IsArray } from 'class-validator';
 import { TransformJsonStringArrayToClassArray } from './transform-utility';
+import { ApiProperty } from '@nestjs/swagger';
 
 class Filter {
   @IsString()
@@ -20,31 +21,23 @@ class Sort {
   order: 'ASC' | 'DESC';
 }
 
-export class FilterContainerDto {
-  @TransformJsonStringArrayToClassArray()
-  @IsArray()
-  filters: Filter[];
-}
-
-export class SortContainerDto {
-  @TransformJsonStringArrayToClassArray()
-  @IsArray()
-  sorts: Sort[];
-}
-
 export class GetRoomsQueryDto {
+  @ApiProperty()
   @IsNumber()
   @Type(() => Number)
   page: number;
 
+  @ApiProperty()
   @IsNumber()
   @Type(() => Number)
   limit: number;
 
+  @ApiProperty()
   @TransformJsonStringArrayToClassArray()
   @Type(() => Filter)
   filters?: Filter[];
 
+  @ApiProperty()
   @TransformJsonStringArrayToClassArray()
   @IsArray()
   sort?: Sort[];
