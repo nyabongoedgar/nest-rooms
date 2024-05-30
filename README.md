@@ -41,6 +41,8 @@ POSTGRES_DB=postgres
 
 These variables are crucial for establishing a connection to the database. Make sure they are accurately configured within your environment file.
 
+The `room` will be automatically created since we have it synced.
+
 A sample json file is provided at `./rooms.json`, this can help you in setting up some data in the rooms table
 
 5. **Start the Server**:  
